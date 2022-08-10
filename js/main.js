@@ -102,9 +102,10 @@ function getTasks() {
     let title = tasks[i].title;
     let description = tasks[i].description;
     // DOM
-    tasksView.innerHTML += `<div class="card mb-3">
-        <div class="card-body">
-          <p>${title} - ${description}
+    tasksView.innerHTML += `<div class="card mb-3 d-flex justify-content-center">
+    <div class="loader"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="appear-an card-body d-flex justify-content-between">
+          <p class="md-4">${title} - ${description}
           <a href="#" onclick="deleteTask('${title}')" class="btn btn-primary ml-5">Delete</a>
           </p>
         </div>
@@ -112,6 +113,5 @@ function getTasks() {
     // DOM
   }
 }
-
 getTasks();
 
